@@ -1,0 +1,573 @@
+@charset "utf-8"; /*文字エンコーディングをUTF-8に指定*/
+body{
+  font-family:"Yu Mincho", YuMincho, serif;
+  min-width: 300px;
+  margin: 0 20px;
+
+}
+
+header {
+  border-top: 30px solid #8EB8FF; /*上ボーダーに10px、実践、青(#8EB8FF)を指定*/
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+header h1 {
+  margin:50px 0 30px 0;/*上50px 右0px 下30px 左0pxのマージンを指定*/
+  text-align: center; /*内容を中央揃え*/
+}
+
+.heading {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+
+header nav ul{ /*リスト*/
+  width: auto; 
+  padding-left: 0; /*デフォルトスタイルをリセット*/
+  margin:0 auto 30px auto; /*上 0px、右 auto、下  30px、左auto */
+  list-style-type:none; /*リストマーカーを消す*/
+  display: flex;
+  justify-content: center; 
+}
+
+header nav ul li{ /* リスト項目*/
+  width: 155px; /*幅を155pxに指定*/
+  margin-right: 2px; /*リスト項目と右隣りのリスト項目の間を2px空ける */
+  text-align: center;/* テキストを中央揃え*/
+}
+
+header nav ul li:last-child{ /*最後のリスト項目*/
+  margin-right: 0;/*右マージン0*/
+
+}
+
+
+.clearfix:after { /* clearfix */
+ content:"";
+ display: block;
+ clear:both;
+}
+
+header nav ul li a{
+  text-decoration: none; /*下線を消す*/
+  background-color: #136FFF; /*背景色青にする*/
+  color: #fff; /*文字色を白(#fff)*/
+  padding: 10px 0; /* パディング　上下10px 左右0px */
+  display: block; /*ブロックレベル表示*/
+}
+
+header nav ul li a:hover, /*カーソルを乗せたとき*/
+header nav ul li a:active, /*クリックをした時*/
+header nav ul li.current a { /*　現在のページ*/
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #8EB8FF;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center; /* 中央揃え*/
+  margin: 0 -20px;
+}
+
+footer ul {
+  padding: 0;
+  margin-bottom: 30px;
+
+}
+
+footer ul li{
+  display: inline; /*インライン表示にして横並びに配置*/
+  margin: 0 10px;
+
+}
+
+footer ul li a{
+  color: #fff;
+
+}
+
+footer ul li a:link,
+footer ul li a:visited{
+  text-decoration: none;/*下線を消す*/
+}
+
+footer ul li a:hover,
+footer ul li a:active{
+  text-decoration: underline; /*下線を表示する:*/
+}
+
+/*main*/
+
+main {
+  width: 100%;
+  margin: 0 auto;/*中央に配置*/
+}
+
+#topic_path {
+  padding-left: 0;
+}
+
+#topic_path li{
+  list-style-type: none;
+  display: inline;
+  font-size: 80%;
+}
+
+#topic_path li:after{
+  padding:0 10px;
+  content: "\003E"; /*大なり記号を挿入*/
+}
+
+#topic_path li:last-child:after{ /*最後のliの要素のうしろ*/
+ content: none;
+
+ }
+
+main a:link,
+main a:visited{
+   color: #511717;
+}
+
+main h1{
+  border-left: 10px solid #8EB8FF;
+  border-bottom: 1px solid #8EB8FF;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+main h2{
+  font-size: 1.5em;
+  text-align: center;
+  position: relative; /*基準位置*/
+  margin-bottom: 50px;
+}
+
+main h2:before,
+main h2:after {
+  position:absolute; /*基準位置*/
+  content: "";/*空の内容挿入*/
+  border-top: 1px dotted #511717;
+  width: 300px;
+  top: 50%;
+
+}
+
+main h2:before{
+  left:0;
+}
+
+main h2:after {
+  right: 0;
+}
+
+.page_top {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom:10px;
+
+}
+
+.page_top a{
+padding-top: 4px;
+border-top: 4px solid #8EB8FF;
+
+}
+
+.page_top a:before{
+  content: "↑"; /*上向き矢印*/
+
+}
+
+.page-top a:link,
+.page_top a:visited {
+
+color: #000000;
+text-decoration: none;
+}
+
+.lead {
+  line-height: 1.8em;
+  margin-bottom: 3em;
+  font-size:110%;
+}
+#main_visual{
+   margin-bottom: 30px;
+   text-align: center;
+}
+
+#main_visual img {
+  width: 90%;
+  height: auto;
+  max-width: 1000px;
+}
+
+#main_content {
+  width: 65%;
+  float: left;
+}
+
+/*-------ブログ---------*/
+
+#blog_article {
+  float:left;
+  width: 80%;
+}
+
+#blog_main h2 {
+  border-left: 10px solid #8EB8FF;
+  border-bottom: 1px solid #8EB8FF;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+#blog_sidebar {
+  float: right;
+  width: auto;
+  height: auto;
+}
+
+#blog_article .page_top{
+  margin: 30px auto;
+}
+
+
+
+#home h2{
+  text-align: left;
+  border-left:10px solid #8EB8FF;
+  border-bottom: 1px solid #8EB8FF;
+  padding:5px 10px;
+  margin-top:0;
+  margin-bottom:30px;
+  font-size: 1.5em;
+}
+
+#home main h2:before,
+#home main h2:after{
+  border-top: none; /*挿入したボーダーを消す*/
+}
+
+#news dl,#info dl{
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+#news dt, #news dd,
+#info dt, #info dd{
+  line-height: 1.5;/*行の高さを変える*/
+}
+
+#news dt, #info dt{
+  width:8em;
+  float:left;
+}
+
+#news dd, #info dd {
+  margin-left: 8em;
+}
+
+/*----バナー------*/
+
+#banner {
+  width: 240px;
+  float: right;
+}
+
+#banner ul{
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+#banner ul li{
+  margin-bottom: 20px;
+}
+
+#banner  img {
+  width: 240px;
+  height: 145px;
+  object-fit: cover;
+}
+
+/*------事業紹介css--------*/
+
+.business p{
+line-height: 20px;
+}
+
+.box_container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.box_container{
+  display: flex;
+  justify-content: center;
+}
+
+.box{
+  width: 30%;
+  margin-right: 20px;
+}
+.box:last-child{
+  margin-right:0;
+}
+
+.box img{
+  width: 100%;
+  height: 20vw;
+  display:block;
+  border:5px solid #fff;
+  box-sizing:border-box;
+  box-shadow: 0 0 8px rgba(0,0,0,0.22);
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+p.photo{
+  margin-bottom:30px;
+}
+
+.box h3{
+  text-align:center;
+}
+
+
+#inside p{
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+/*--------会社概要---------*/
+
+.main_human, .leda {
+  text-align:center
+}
+
+table {
+  border-collapse: collapse;
+  margin:0 auto 30px;
+  border: 1px solid #136FFF;
+}
+
+table th, table td{
+  padding: 10px 20px;
+}
+
+table th{
+
+border-right: 1px solid #136FFF;
+}
+
+table tr:nth-child(odd){
+background-color: #EEEEEE	;
+}
+
+/*---------お問い合わせcss---------*/
+
+#contact form{
+  width:820px;
+  margin: 0 auto;
+}
+
+#contact dl dt, #contact dl dd{
+  line-height:2em;
+  margin-left:0;
+}
+
+#contact dl dt{
+  width:380px;
+  float:left;
+  text-align: right;
+  padding: 10px;
+}
+
+#contact dl dd{
+  width: 400px;
+  float: right;
+  padding: 10px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea{
+  padding: 5px;
+  width: 300px;
+}
+#contact textarea{
+  height: 5em;
+}
+
+#contact .button{
+  text-align: center;
+}
+#contact input[type="submit"]{
+  background-color: #136FFF;
+  color:#fff;
+  padding:10px 30px;
+  font-family: "Yu Gothic",YuGothic,sans-rerif;
+  border: 1px solid #511717;
+  cursor: pointer
+}
+
+/*レスポンシブ用*/
+@media screen and (max-width: 760px){
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+header,main, #main_content, #banner, header nav ul {
+  width: auto;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+
+/*----------------
+ヘッダー
+-----------------*/
+
+header nav ul {
+  display: initial;
+  justify-content: initial;
+}
+
+header nav ul li {
+  margin-right: 0;
+  width: 50%;
+  border:1px solid #fff;
+  box-sizing: border-box;
+  float: left;
+}
+
+
+/*--------------
+トップ
+---------------*/
+
+#main_visual {
+  margin-top: 10px;
+}
+
+#banner {
+  float: none;
+  text-align: center;
+}
+
+
+/*---------------------
+ブログ
+---------------------*/
+#blog_sidebar {
+  float: none;
+  width: auto;
+}
+
+#blog_article {
+  width: 100%;
+}
+
+
+
+/*---------------------
+footer
+----------------------*/
+
+footer {
+  padding-top:20px;
+}
+
+footer ul {
+  display: none;
+}
+
+/*-----------------------
+contact
+-----------------------*/
+
+#contact form{
+  width:100%;
+  text-align: center;
+}
+
+#contact dl dt{
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#contact dl dd{
+  float: none;
+  box-sizing: border-box;
+  width: calc(100% - 10px);
+  padding: 0;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+}
+
+main .form_title h2:before,
+main .form_title h2:after {
+  border-top: none;
+
+}
+
+/*-----------------
+access
+------------------*/
+.map {
+  position:relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.map iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*------------------------
+事業紹介
+------------------------*/
+
+.box_container {
+  display: block;
+}
+
+.box{
+  width: 100%;
+  margin: 0 auto;
+  float: none;
+}
+
+.box img{
+  width: 300px;
+  height: auto;
+  display:block;
+  border:5px solid #fff;
+  box-sizing:border-box;
+  box-shadow: 0 0 8px rgba(0,0,0,0.22);
+  margin: 0 auto;
+}
+
+}
